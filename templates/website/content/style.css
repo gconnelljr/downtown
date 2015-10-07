@@ -1,0 +1,1170 @@
+body {
+  margin: 0;
+  padding: 0px;
+  font-family: 'Futura-Book', arial, sans-serif;
+}
+
+@font-face { font-family: 'Futura-Book'; src: url('../content/fonts/FuturaStd-Book.otf');} 
+@font-face { font-family: 'Futura-Medium'; src: url('../content/fonts/FuturaStd-Medium.otf');} 
+@font-face { font-family: 'Futura-Medium-Oblique'; src: url('../content/fonts/FuturaStd-MediumOblique.otf');} 
+@font-face { font-family: 'Futura-Heavy'; font-weight: bold; src: url('../content/fonts/FuturaStd-Heavy.otf');}
+@font-face { font-family: 'Gotham-Bold'; src: url('../content/fonts/Gotham-Bold.otf');} 
+@font-face { font-family: 'Gotham-Book'; src: url('../content/fonts/Gotham-Book.otf');} 
+@font-face { font-family: 'Gotham-Light'; src: url('../content/fonts/Gotham-Book.otf');} 
+@font-face { font-family: 'Gotham-Medium'; src: url('../content/fonts/Gotham-Medium.otf');} 
+@font-face { font-family: 'GothamNarrow-Medium'; src: url('../content/fonts/GothamNarrow-Medium.otf');} 
+@font-face { font-family: 'GothamNarrow-Bold'; src: url('../content/fonts/GothamNarrow-Bold.otf');} 
+
+#right-menu {
+  display: none;
+}
+
+/*START HEADER*/
+.header_container {
+  position: relative;
+  width: 1024px;
+  margin: 10px auto;
+}
+
+.featured_cities {
+  display: none;
+  position: absolute;
+  background: black;
+  color: white;
+  padding: 20px 10px;
+  top: 43px;
+  width: 100%;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.featured-city {
+  display: inline-block;
+  padding: 3px 0;
+  width: 24%;
+}
+
+.change-city {
+  display: block;
+  padding: 5px;
+  margin: 0px auto 30px;
+  width: 120px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background: #ca9b3a;
+}
+
+.non-featured-cities {
+  display: none;
+  width: 100%!important;
+}
+
+.non-featured-city {
+  display: inline-block;
+  padding: 3px 0;
+  width: 24%;
+}
+
+.header_nav {
+  position: absolute;
+  top: 20px;
+  left: 22%;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'Futura-Medium', arial, sans-serif;
+}
+
+.header_nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header_nav a:hover { text-decoration: underline;}
+
+.nav_link {
+  padding: 15px 7px;
+}
+
+.nav_link:first-child { padding-left: 0;}
+
+.post_party {
+  margin-right: -4px;
+  color: white!important;
+  box-shadow: 6px 6px 7px #888888;
+  background: #ca9b3a;
+}
+
+.concierge {
+  color: white!important;
+  background: #919191;
+  padding: 15px 10px;
+  box-shadow: 6px 6px 7px #888888;
+  background: #7B7B8B;
+}
+
+.post_party:hover {
+  text-decoration: none;
+  background: -webkit-linear-gradient(#F4EB5D, #ca9b3a); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F4EB5D, #ca9b3a); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F4EB5D, #ca9b3a); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F4EB5D, #ca9b3a); /* Standard syntax (must be last) */
+}
+
+.concierge:hover {
+  text-decoration: none;
+  background: -webkit-linear-gradient(#c8c8c8, #919191); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c8c8c8, #919191); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c8c8c8, #919191); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c8c8c8, #919191); /* Standard syntax (must be last) */
+}
+
+.right-middlecol.col a {
+  color: white;
+  text-decoration: none;
+}
+
+.banner_container {
+  /*margin-bottom: 50px;*/
+  padding-top: 40px;
+  height: 160px;
+  background: url('images/banner.jpg');
+}
+
+.banner_content {
+  width: 1024px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+.banner_content .main_col {
+  display: inline-block;
+  width: 513px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(0,0,0,0.6);
+  padding: 12px;
+  margin-left: 85px;
+}
+
+.banner_content .city {
+  margin: 0;
+  font-size: 30px;
+  font-family: 'Futura-Heavy', arial, sans-serif;
+}
+
+.banner_content .title {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-family: 'Futura-Medium', arial, sans-serif;
+}
+
+.search_row {
+  text-align: initial;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 13px;
+  font-family: 'Futura-Medium', arial, sans-serif;
+  display: none;
+}
+
+.search_row span {
+  letter-spacing: 1px;
+}
+
+.search_row form {
+  display: inline;
+  font-family: 'Futura-Medium', arial, sans-serif;
+}
+
+.search_row .search_field {
+  margin: 0 10px;
+  padding: 0px 8px;
+  width: 51%;
+  height: 30px;
+  font-size: 12px;
+}
+
+.search_btn {
+  width: 100px;
+  padding: 10px 15px;
+  color: white;
+  background: #f5d17d;
+  border: none;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-family: 'Futura-Heavy', arial, sans-serif;
+}
+
+.home-lg-events {
+  display: inline;
+}
+
+.side_col {
+  /* display: none; */
+  position: relative;
+  float: right;
+  right: 0;
+  /* bottom: 50px; */
+  font-size: 13px;
+  /* width: 200px; */
+}
+
+.side_col .questions,
+.side_col .customer_service {
+  /* height: 30px; */
+  background: rgba(0,0,0,0.6);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.social_media img {
+  width: 30px;
+}
+/*END HEADER ----------------------------------------------- */
+
+/*START FOOTER*/
+/*END FOOTER ----------------------------------------------- */
+
+/*START NYE LISTINGS*/
+.listings_page {
+  width: 1024px;
+  margin: 50px auto;
+}
+
+/*START SIDE CONTENT*/
+.listings_page .side_content {
+  /* float: left; */
+  width: 20%;
+  display: inline-block;
+  margin-right: 5%;
+}
+
+.listings_page .side_content .heading {
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Futura-Medium', arial, sans-serif;
+}
+
+.listing_page .1-events p{
+  height: initial;
+}
+
+.address {
+  font-size: 10px;
+  text-align: center;
+}
+
+.listings_page .side_content .heading:first-child {
+  /* border-bottom: none; */
+  padding-bottom: 0;}
+
+.news_letter .email_field {
+    padding: 5px 0 5px 5px;
+  margin-bottom: 60px;
+    width: 160px;
+    height: 19px;
+    background: #e2dede;
+    border: none;
+    font-size: 10px;
+    font-family: 'Futura-Book', arial, sans-serif;
+    color: black;
+}
+
+.news_letter .email_btn {
+  width: 35px;
+  height: 30px;
+  margin-left: -5px;
+  padding: 0;
+  border: none;
+  background-image: url("../content/images/email.png");
+  text-indent: -9999px;
+  vertical-align: middle;
+}
+
+.gold_square {
+  width: 11px;
+  margin-right: 10px;
+}
+
+.listings_page .side_content ul {
+  padding-left: 0;
+  padding-top: 0;
+  margin-top: -10px;
+  margin-bottom: 60px;
+  list-style-type: none;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.bar-item {
+    margin: 20px 0;
+}
+
+span.barname {
+    font-weight: bold;
+}
+
+a.links {
+  width: 227px;
+  position: absolute;
+  height: 405px;
+  display: block;
+}
+
+.parties {
+  font-weight: bold;
+  margin-top: 38px;
+}
+
+.highlight {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  top: 189px;
+  text-align: center;
+  background: #E9A006;
+  display: none;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.highlight:hover{
+  display: block;
+}
+
+span.starting_price {
+    padding-top: 5px;
+}
+
+div#notify-submitted {
+  font-size: 20px;
+  margin-top: 19px;
+}
+
+a.nav_link.active_nav {
+  text-decoration: underline;
+}
+
+.ne-rightform {
+    display: none;
+}
+
+.ne-phone span {
+    display: block;
+}
+
+.ne-phone {
+    margin-top: 14px;
+}
+
+.noevent-email {
+  margin-top: 10px;
+}
+
+label.lnname {
+    margin-left: 83px;
+}
+
+form.frmNotify article {
+    margin-top: 17px;
+}
+
+button.formbtn.post_party {
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.neighborhood_name {
+    padding: 4px 0;
+    border-bottom: 1px solid #999;
+}
+
+.venue_name {
+    padding: 4px 0;
+    border-bottom: 1px solid #999;
+}
+
+.venue_name:first-child{
+    margin-top: -8px;
+}
+
+.listings_page .side_content li {
+  padding: 5px 0;
+  border-top: 1px solid grey;
+}
+
+.listings_page .side_content a {  
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.rightcol.col.events a {
+  text-decoration: none;
+}
+
+/*.listings_page .side_content a:hover { text-decoration: underline;}*/
+
+.listings_page .side_content .parties li:hover { background: #eac26e;}
+
+.venue_count { float: right;}
+/*END SIDE CONTENT ----------------------------------------------- */
+
+/*START MAIN CONTENT*/
+.listings_page .main_content {
+  width: 74%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main_content{
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.listings_page .introduction {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #f2daa8;
+  line-height: 150%;
+  font-size: 15px;
+  font-family: 'Futura-Book', arial, sans-serif;
+}
+
+.venue_type {
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+span.amount {
+  float: right;
+}
+
+
+.listings_page .col {
+  display:inline-block;
+  width: 30%;
+  margin: 16px 0 0 16px;
+  /* background: #F2F2F2; */
+  padding-bottom: 15px;
+}
+
+.listings_page .leftcol {
+  float: left;
+}
+
+.listings_page .midcol {
+  margin-left: 5%;
+}
+
+.rightcol.col img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.listings_page .col img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+title{
+  text-transform: capitalize;
+}
+
+.chosen_city {
+    display: inline-block;
+    vertical-align: top;
+}
+
+a.city_chosen {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.col .party_name {
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'Futura-Heavy', arial, sans-serif;
+  color: #E9A006;
+  height: 19px;
+  overflow: hidden;
+}
+
+.listings_page p {
+  font-size: 14px;
+  font-family: 'GothamNarrow-Book', arial, sans-serif;
+  height: 32px;
+  overflow: hidden;
+  padding: 0 13px 13px;
+}
+
+.listings_page .col span {
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: .8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'GothamNarrow-Medium', arial, sans-serif;
+}
+
+.listings_page .col_buttons {
+  width: 75%;
+  margin: 0 auto;
+}
+
+a.city_color.drop_menu {
+  cursor: pointer;
+}
+
+.listings_page .buy_btn,
+.listings_page .info_btn
+{
+  display: inline-block;
+  width: 35%;
+  padding: 8px;
+  font-size: .7em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Gotham-Bold' arial, sans-serif;
+  color: white;
+}
+
+.listings_page .buy_btn {
+  float: left;
+  background: #d6ab52;
+}
+
+.listings_page .info_btn {
+  float: right;
+  background: #919191;
+}
+
+.listings_page .col_buttons a {
+  text-decoration: none;
+  color: white;
+}
+
+.listings_page .row2 { margin-bottom: 100px;}
+/*END MAIN CONTENT*/
+/*END NYE LISTINGS ----------------------------------------------- */
+
+/*START NYE PROFILE PAGE */
+.profile_page {
+  width: 1024px;
+  margin: 0 auto 100px;
+}
+
+.page_nav {
+  margin-bottom: 40px;
+  padding: 0;
+  font-family: 'Futura-Heavy', arial, sans-serif;
+}
+
+.profile_page .page_link {
+  display: inline-block;
+  padding: 0 60px;
+  border-right: 2px solid #ca9b3a;
+}
+
+.profile_page .page_link:first-child {
+  padding-left: 0;
+}
+
+.profile_page .page_link:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.profile_page .page_link a {
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ca9b3a;
+}
+
+/*START SIDE CONTENT*/
+.profile_page .side_content {
+  /* float: left; */
+  width: 33%;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.profile_pic {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.venue_gallery .heading {
+  font-size: 12px;
+}
+
+.venue_gallery span {
+  font-size: 10px;
+}
+
+/*START GALLERY*/
+.display img {
+  width: 100%;
+}
+
+.thumbnails img {
+  display: inline-block;
+  width: 30%;
+  margin: 0 1%;
+}
+/*END GALLERY --------------------------------- */
+
+/*END SIDE CONTENT ----------------------------------------------- */
+
+/*START MAIN CONTENT*/
+.profile_page .main_content {
+  display: inline-block;
+  width: 64%;
+  vertical-align: top;
+}
+
+.profile_page .party_info {
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #ca9b3a;
+}
+
+.profile_page .party_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ca9b3a;
+  font-family: 'Futura-Heavy', arial, sans-serif;
+}
+
+.profile_page .party_location {
+  font-family: 'Futura-Medium', arial, sans-serif;
+  color: #052f31;
+}
+
+.venue_gallery {
+    margin-top: 40px;
+}
+
+.promotions {
+    font-weight: bold;
+}
+
+.profile_page .page_top {
+  float: right;
+}
+
+.page_top a {
+  text-decoration: none;
+  color: #ca9b3a;
+}
+
+.ticket_info {
+  font-family: 'Gotham-Bold', arial, sans-serif;
+}
+
+.profile_page .heading {
+  font-size: 18px;
+  font-family: 'Futura-Medium', arial, sans-serif;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #999;
+}
+
+.profile_page .page_top {
+  font-size: 11px;
+}
+
+.ticket_row1 {
+  padding: 20px;
+}
+
+.ticket_info {
+  border-bottom: 3px solid #ca9b3a;
+}
+
+.ticket_info .left_col {
+  display: inline-block;
+  width: 70%;
+  /* border-right: 1px solid grey; */
+}
+
+.ticket_type {
+  font-size: 14px;
+  font-family: 'Gotham-Bold', arial, sans-serif;
+}
+
+.ticket_info .v {
+  margin: 0 3px;
+  font-size: 12px;
+  color: #ca9b3a
+}
+
+.ticket_details a {
+  font-size: 12px;
+  text-decoration: none;
+  font-style: italic;
+  color: #ca9b3a;
+  font-family: 'Futura-Medium-Oblique', arial, sans-serif;
+}
+
+.ticket_details a:hover {
+  text-decoration: underline;
+}
+
+.ticket_info ul {
+  padding: 0;
+  font-size: 13px;
+  list-style-type: none;
+  line-height: 180%;
+  font-family: 'Gotham-Book', arial, sans-serif;
+}
+
+.ticket_info ul li:before{
+  content:"- ";
+}
+
+#ticket-drop {
+  display: none;
+}
+
+.ticket_info .right_col {
+  display: inline-table;
+  position: relative;
+  bottom: 6px;
+  float: right;
+  font-size: 14px;
+}
+
+.ticket_info .price {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.ticket_info .fee {
+  margin: 0 15px;
+}
+
+.ticket_info .buy_tickets {
+  display: inline-block;
+  width: 92px;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Futura-Bold', arial, sans-serif;
+  background: #ca9b3a;
+  color: white;
+}
+
+.ticket_row2 {
+  margin: 20px 0 20px;
+  padding: 20px 0;
+  border-top: 1px solid #7f7d7d; 
+  border-bottom: 1px solid #7f7d7d; 
+}
+
+.ticket_row2 .right_col {
+  position: relative;
+  bottom: 8px;
+}
+
+.ticket_info .char {
+  margin: 0 3px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.ticket_row3 {
+  margin-bottom: 30px;
+}
+
+.profile_page p {
+  font-size: 12px;
+  font-family: arial, sans-serif;
+}
+
+.profile_page .description {
+  margin-top: 30px;
+  border-bottom: 3px solid #ca9b3a;
+}
+
+.music_crowd {
+  margin-top: 30px;
+}
+
+.music_crowd .topic {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+}
+/*END MAIN CONTENT*/
+/*END NYE PROFILE PAGE ----------------------------------------------- */
+
+/*MEDIA QUERIES ----------------------------------------------- */
+
+@media(max-width: 1024px) {
+  #right-menu {
+    display: block;
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Futura-Heavy', arial, sans-serif;
+    background: none;
+  }
+
+  .sidr {
+    width: 167px!important;
+    text-align: center;
+  }
+
+  .sidr li {
+    list-style-type: none;
+    /* height: 50px; */
+    padding: 20px;
+  }
+
+  .sidr a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ca9b3a;
+  }
+
+  .sidr-class-post_party {
+    color: white!important;
+    background: -webkit-linear-gradient(#F4EB5D, #ca9b3a); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#F4EB5D, #ca9b3a); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#F4EB5D, #ca9b3a); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#F4EB5D, #ca9b3a); /* Standard syntax (must be last) */
+  }
+
+  .sidr-class-concierge {
+    color: white!important;
+    background: -webkit-linear-gradient(#c8c8c8, #919191); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#c8c8c8, #919191); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#c8c8c8, #919191); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#c8c8c8, #919191); /* Standard syntax (must be last) */
+  }
+
+  .sidr-class-post_party a {
+    color: white!important;
+  }
+  
+  .sidr-class-concierge a {
+    color: white!important;
+  }
+
+  #right-menu img {
+    width: 60px;
+  }
+
+  /*START HEADER*/
+  .header_container {
+    width: 100%;
+  }
+
+  .header_nav {
+    display: none;
+  }
+
+  .banner_content {
+    width: 100%;
+  }
+
+  .nye_logo {
+    margin-left: 4%;
+  }
+
+  .banner_content .side_col {
+    right: 5%;
+  }
+  /*END HEADER --------------------------------------------------- */
+
+  /* START LISTINGS PAGE ----------------------------------------------- */
+  .listings_page {
+    width: 100%;
+  }
+
+  .listings_page .side_content {
+    display: block;
+    float: initial;
+    width: 90%;
+    margin: auto;
+  }
+
+  .listings_page .main_content {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  /* END LISTINGS PAGE ----------------------------------------------- */
+
+  /* START PROFILE PAGE ----------------------------------------------- */
+  .profile_page {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .page_nav {
+    display: none;
+  }
+
+  .profile_page .side_content {
+    width: 100%;
+  
+    margin-right: 0;
+}
+
+  /*START GALLERY*/
+  .display {
+     display: inline-block;
+     width: 70%;}
+
+  .display img {
+    width: 100%;
+  }
+
+  .thumbnails {
+    display: inline-block;
+    width: 29%;
+  }
+
+  .thumbnails img {
+    display: inline-block;
+    width: 47%;
+    margin: 0 .5%;
+  }
+  /*END GALLERY --------------------------------- */
+
+  .profile_page .main_content {
+    width: 100%;
+  }
+
+  /* END PROFILE PAGE ----------------------------------------------- */  
+}/* END MAX WIDTH 1024PX ----------------------------------------------- */
+
+@media(max-width: 768px) {
+  /*START GALLERY PAGE*/
+  /*.venue_gallery {
+    display: none;
+  }*/
+  /*END GALLERY PAGE --------------------------------- */
+} /*end max-width 768*/
+
+@media(max-width: 600px) {
+  .banner_content .main_col {
+    width: 90%;
+  }
+
+  .banner_content .city {
+    font-size: 2.5em;
+  }
+
+  .banner_content .title {
+    font-size: 2em;
+  }
+
+  .search_row {
+    width: 90%;
+  }
+
+  .search_row span {
+    display: block;
+  }
+
+  .search_row .search_field {
+    width: 65%;
+    margin-left: 0;
+  
+    margin-right: 0;
+  
+    font-size: .7em;
+    height: 32px;
+  }
+
+  .search_btn {
+    width: 24%;
+  
+    font-size: .8em;
+    padding: 12px 0px;
+    height: 37px;
+  }
+
+  .listings_page .parties {
+    display: none;
+  }
+
+  .listings_page .col {
+    display: inline-block;
+    float: initial;
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  .listings_page .row1 {
+    margin-bottom: 0;
+  }
+
+  /* START PROFILE PAGE ----------------------------------------------- */
+  /*START GALLERY PAGE*/
+  .display {
+    display: none;
+  }
+
+  .thumbnails {
+    width: 100%;
+  }
+
+  .thumbnails img {
+  }
+  /*END GALLERY PAGE --------------------------------- */
+  .ticket_info .left_col {
+    width: 100%;
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .ticket_info .right_col {
+    display: block;
+    position: initial;
+    float: initial;
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  span.page_top {
+    margin-top: 0;
+  }
+
+  .ticket_info .buy_tickets {
+    position: relative;
+    bottom: 10px;
+    float: right;
+  }
+  /* END PROFILE PAGE ----------------------------------------------- */  
+}/* END MAX WIDTH 600PX ----------------------------------------------- */
+
+@media(max-width: 480px){
+  .news_letter .email_field {
+    width: 86%;
+  }
+
+  .banner_content .city {
+    font-size: 1.7em;
+  
+    margin-bottom: 5px;
+  }
+
+  .banner_content .title {
+    font-size: 1.2em;
+  } 
+
+  .listings_page .introduction {
+    font-size: .8em;
+  }
+}/* END MAX WIDTH 480PX ----------------------------------------------- */
+
+
+/*--------------------- FOOTER MEDIA QUERIES --------------------------*/
+@media (min-width: 300px) {
+  footer {
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Gotham-Book', arial, sans-serrif;
+    color: #fff;
+    background: #131216;
+  }
+
+  .vip_link {
+    padding: 30px 0;
+    font-size: 14px;
+  }
+
+  .vip_link a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .footer_row .col {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .footer_row .col:first-child {
+    padding-left: 0;
+  }
+
+  .footer_row .col:last-child {
+    margin-bottom: 0;
+  }
+
+  footer span {
+    display: block;
+    color: #d6ab52;
+  }
+
+  footer .social_media img {
+    width: 30px;
+    margin: 5px 1px -5px;
+  }
+
+  .copyright {
+    padding: 40px 0;
+  }
+} /*end min width 300*/
+
+@media (min-width: 600px) {
+  .footer_row {
+    position: relative;
+    max-width: 91%;
+    left: 4%;
+    margin: 0 auto;
+  }
+
+  .footer_row .col {
+    display: inline-block;
+    padding: 10px 3%;
+    margin-bottom: 0;
+    border-right: 2px solid #fff;
+  }
+
+  .footer_row .col:first-child {
+    padding-left: 0;
+  }
+
+  .footer_row .col:last-child {
+    padding-right: 0;
+    border: none;
+  }
+} /*end min width 600*/
+
+@media (min-width: 768px) {
+  .footer_row .col {
+    padding: 10px 6%;
+  }
+} /*end min width 768*/
+
+@media (min-width: 992px) {
+  .footer_row {
+    max-width: 890px;
+    left: 2.5%;
+  }
+} /*end min width 992*/

@@ -1,0 +1,1354 @@
+@font-face { font-family: 'Gotham-Bold'; src: url('../fonts/gotham/Gotham-Bold.otf');}
+@font-face { font-family: 'Gotham-BoldItalic'; src: url('../fonts/gotham/Gotham-BoldItalic.otf');}
+@font-face { font-family: 'Gotham-Book'; src: url('../fonts/gotham/Gotham-Book.otf');}
+@font-face { font-family: 'Gotham-Light'; src: url('../fonts/gotham/Gotham-Light.otf');}
+@font-face { font-family: 'Gotham-Medium'; src: url('../fonts/gotham/Gotham-Medium.otf');}
+@font-face { font-family: 'Gothamx-Medium'; src: url('../fonts/GothamXNarrow/GothamXNarrow-Medium.otf');}
+@font-face { font-family: 'Century-Gothic'; src: url('../fonts/Century-Gothic.ttf');}
+
+body {
+	margin: 0;
+	padding: 0px;
+}
+
+img {
+	width: 100%;
+}
+
+title {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	font-size: inherit;
+	color: inherit;
+}
+
+.pages {
+	padding: 0 10px;
+	max-width: 1024px;
+	margin: 0 auto 60px;
+}
+
+/*START HEADER*/
+header {
+	margin-bottom: 40px;
+	text-transform: uppercase;
+}
+
+.lindy-logo {
+	width: 200px;
+	float: left;
+	z-index: 10;
+}
+
+.contacts-row {
+	background: #000;
+}
+
+.lindy-contacts {
+	position: relative;
+	padding:  10px 0;
+	max-width: 1024px;
+	margin: 0 auto;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.lindy-contacts span {
+  color: #1792ce;
+  vertical-align: middle;
+}
+
+.lindy-contacts .service-num {
+	padding-right: 10px;
+	color: #fff;
+}
+
+.head-media {
+	display: inline-block;
+	padding-left: 10px;
+	border-left: 1px solid #979797;
+	vertical-align: middle;
+}
+
+.head-media a {
+	display: inline-block;
+	width: 30px;
+}
+
+header .city-row {
+	padding: 10px 0;
+	font-size: 13px;
+	color: #fff;
+	background: #1792ce;
+}
+
+header .city-row a {
+	padding-left: 1.4%;
+}
+
+.head-nav-row {
+	padding: 13px 0;
+	font-size: 12px;
+	text-align: right;
+	color: #1692cf;
+}
+
+.head-nav {
+	max-width: 1024px;
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+.head-nav li {
+	display: inline-block;
+	margin-right: 1.5%;
+}
+
+.head-nav li:last-child {
+	margin-right: 0;
+}
+
+.banner-container {
+	padding: 20px 0px;
+	text-align: center;
+	text-transform: initial;
+	color: #fff;
+	background-image: url("../images/lindy-banner.png");
+	background-size: 100% 100%;
+}
+
+.banner-content {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.banner-content h1 {
+	font-size: 23px;
+	font-family: 'Gotham-Medium';
+	letter-spacing: 3px;
+}
+
+.banner-content p {
+	padding-bottom: 50px;
+	width: 65%;
+	margin: 0 auto;
+	font-size: 14px;
+	font-family: 'Gotham-Book';
+	line-height: 150%;
+	text-transform: initial;
+}
+
+.banner-content span {
+	font-size: 14px;
+	font-family: 'Gotham-Book';
+}
+
+.banner-content form {
+	display: inline-block;
+	font-family: 'Gotham-Bold';
+}
+
+.banner-content .email {
+	padding: 5px;
+	margin-left: 10px;
+	margin-right: -5px;
+	width: 230px;
+}
+
+.banner-content .submit-btn {
+	margin: 0;
+	padding: 7px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: 'Gotham-Bold';
+	color: #fff;
+	background: #979797;
+	border: none;
+}
+
+/*END HEADER ------------------------------- */
+
+
+/*START FOOTER*/
+/*END FOOTER ------------------------------- */
+
+
+/*START INDEX*/
+/*.index {
+	padding: 0 1%;
+	max-width: 1024px;
+	margin: 0 auto;
+}*/
+
+.heading {
+	padding: 5px 0;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-family: 'Gotham-Medium';
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background: #1793ce;
+}
+
+.upcoming-col {
+	display: inline-block;
+	width: 23.9%;
+	margin-right: 0.8%;
+	text-align: center;
+}
+
+.index .upcoming-col:last-child {
+	margin-right: 0;
+}
+
+.upcoming-col .city-name {
+	padding: 10px 0 5px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+}
+
+.upcoming-col .date {
+	padding-bottom: 5px;
+	font-size: 14px;
+	font-family: 'Gotham-book';
+}
+
+.btn {
+	display: inline-block;
+	padding: 8px 0;
+	width: 35%;
+	font-size: 12px;
+	font-family: 'Gotham-Bold';
+	text-align: center;
+	color: #fff;
+}
+
+.info-btn {
+	/*margin-right: 3%;*/
+	background: #8d8d8d;
+}
+
+.buy-btn {
+	position: relative;
+	left: 3%;
+	background: #f4a103;
+}
+
+.upcoming-events {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.main-city-col {
+	display: inline-block;
+	width: 48%;
+}
+
+.left-city-col {
+	margin-right: 3.4%;
+}
+
+.main-city-col .city-name {
+	padding: 10px 0 20px;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #1793ce;
+}
+
+.main-city-col p {
+	font-size: 13px;
+	font-family: 'Gotham-Book';
+	line-height: 150%;
+}
+
+.view-all {
+	padding: 5px 0;
+	width: 150px;
+	margin: 0 auto 50px;
+	font-size: 13px;
+	font-family: 'Gotham-bold';
+	text-align: center;
+	color: #fff;
+	background: #8d8d8d;
+}
+
+.city-col {
+	display: inline-block;
+	width: 31.6%;
+	margin-right: 2%;
+	font-size: 13px;
+	font-family: 'Gotham-Book';
+	line-height: 150%;
+}
+
+.city-row .city-col:last-child {
+	margin-right: 0;
+}
+
+.choose-city .city-name {
+	padding: 10px 0 20px;
+	font-size: 18px;
+	font-family: 'Gotham-Medium';
+	text-align: center;
+	text-transform: uppercase;
+	color: #1793ce;
+}
+
+.latest-party .party-col {
+	display: inline-block;
+	width: 23.9%;
+	margin-right: .9%;
+	text-align: center;
+	vertical-align: top;
+}
+
+.latest-party .party-col:last-child {
+	margin-right: 0;
+}
+
+.latest-party title {
+	padding: 10px 0 5px;
+	font-size: 13px;
+	font-family: 'Gotham-bold';
+	text-transform: uppercase;
+}
+
+.latest-party .date {
+	font-size: 13px;
+	font-family: 'Gotham-Book';
+}
+
+.latest-party .view-all {
+	margin-top: 20px;
+	width: 180px;
+}
+
+.media-row .col {
+	display: inline-block;
+	width: 27.5%;
+	line-height: 120%;
+	vertical-align: top;
+}
+
+.media-row .instagram-col {
+	padding: 0 4%;
+	margin: 0 4%;
+	border-left: 1px solid #979797;
+	border-right: 1px solid #979797;
+}
+
+.twitter-col p {
+	padding: 0px;
+	margin: 0;
+}
+
+.twitter-post {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	font-size: 13px;
+	font-family: 'Gotham-Book';
+	border-bottom: 1px solid #979797;
+}
+
+.twitter-post:last-child {
+	border-bottom: none;
+}
+
+
+.media-row .start-planning {
+	padding: 5px 0;
+	width: 100%;
+	font-size: 15px;
+	font-family: 'Gotham-Bold';
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	background: #8d8d8d;
+}
+/*END INDEX ------------------------------- */
+
+/*START CITY LANGING*/
+/*.city-landing-page {
+	padding: 0 10px;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+*/
+.crawls-hunts-tours,
+.city-parties,
+.featured-holidays,
+.latest-party,
+.happening-now,
+.specialty-crawls,
+.holiday-allevents {
+	text-align: center;
+}
+
+.cols3 {
+	display: inline-block;
+	padding-bottom: 15px;
+	width: 31%;
+	margin-right: 2.5%;
+	font-family: 'Gotham-Bold';
+	text-align: center;
+	border: 1px solid #979797;
+}
+
+.cols3:last-child {
+	margin-right: 0!important;
+}
+
+.cols3 span,
+.cols3 span {
+	display: block;
+	padding: 5px 0 10px;
+	font-size: 12px;
+}
+
+.cols3 .btn {
+	display: inline-block;
+	padding: 5px 0;
+	width: 100px;
+	font-size: 11px;
+	color: #fff;
+}
+
+.cols3 .info-btn {
+	/*margin-right: 3%;*/
+	background: #8d8d8d;
+}
+
+.cols3 .buy-btn {
+	background: #1793ce;
+}
+
+.city-landing-page .see-all {
+	padding: 5px 0;
+	width: 200px;
+	margin: 20px auto 50px;
+	font-family: 'Gotham-Bold';
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	background: #1793ce;
+}
+
+.featured-holidays .cols3 {
+	padding-bottom: 0;
+	border: none;
+}
+
+.featured-holidays .see-all {
+	font-size: 14px;
+	width: 150px;
+}
+
+.city-landing-page .view-all {
+	background: #1793ce;
+}
+
+.venues {
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.venue-col {
+	display: inline-block;
+	width: 23%;
+	margin-right: 2%;
+	text-align: initial;
+}
+
+.venue-col:last-child {
+	margin-right: 0;
+}
+
+.venues title {
+	font-size: 17px;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+}
+
+.venues span {
+	font-size: 12px;
+	font-family: 'Gotham-Book';
+	font-style: italic;
+}
+
+.city-landing-page .city-blogs .row {
+	padding-bottom: 30px;
+}
+
+.city-blog,
+.ft-venue-col {
+	display: inline-block;
+	width: 49%;
+	margin-right: 1%;
+}
+
+.city-blog:last-child,
+.ft-venue-col:last-child {
+	margin-right: 0;
+}
+
+.city-blog img,
+.ft-venue-col img {
+	width: 50%;
+	margin-right: 1%;
+}
+
+.city-blog .content,
+.ft-venue-col .content {
+	display: inline-block;
+	width: 48%;
+	vertical-align: top;
+}
+
+.city-blog title {
+/*.ft-venue-col title {*/
+	font-size: 13px;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+}
+
+.city-blog span {
+/*.ft-venue-col span {*/
+	display: block;
+	font-style: italic;
+	font-size: 11px;
+	font-family: 'Gotham-Book';
+}
+
+.city-blog p {
+/*.ft-venue-col p {*/
+	margin: 5px 0;
+	font-size: 10px;
+	font-family: 'Gotham-Book';
+	line-height: 120%;
+}
+
+.city-blog a {
+/*.ft-venue-col a {*/
+	font-style: italic;
+	font-size: 11px;
+	font-family: 'Gotham-Bold';
+	color: #1793ce;
+}
+/*END CITY LANGING ------------------------------- */
+
+/*START CRAWL LANGING*/
+/*.crawl-landing-page {
+	padding: 0 10px;
+	max-width: 1024px;
+	margin: 0 auto;
+}*/
+
+.crawl-section {
+	padding-bottom: 40px;
+}
+
+.crawl-listing {
+	padding: 20px 0;
+	border-bottom: 1px solid #1793ce;
+}
+
+.crawl-listing:last-child {
+	border-bottom: none;
+}
+
+.crawl-landing-page .cols3 span {
+	padding: 0 0 5px 0;
+}
+
+.holiday-crawls img {
+	width: 260px;
+}
+
+.holiday-crawls .content-block {
+	display: inline-block;
+	position: relative;
+	left: 3%;
+	width: 68%;
+	vertical-align: top;
+}
+
+.holiday-heading {
+	padding: 2px 2%;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.holiday-crawls .holiday-heading{
+	background: green;
+}
+
+.crawl-landing-page .left-content {
+	display: inline-block;
+	width: 50%;
+	padding-right: 2%;
+	border-right: 1px solid #979797;
+}
+
+.crawl-landing-page .left-content p {
+	margin: 0 0 20px;
+	font-size: 11px;
+	font-family: 'Gotham-Book';
+	line-height: 150%;
+}
+
+.crawl-landing-page .right-content {
+	display: inline-block;
+	position: relative;
+	left: 4%;
+	width: 46%;
+	vertical-align: top;
+}
+
+.crawl-landing-page .right-content title {
+	font-size: 14px;
+	font-family: 'Gotham-Medium';
+}
+
+.crawl-landing-page .right-content .btn {
+	margin: 20px 0 30px;
+}
+/*END CRAWL LANGING ------------------------------- */
+
+/*START HOLIDAY LANGING*/
+/*.holiday-landing-page {
+	padding: 10px;
+	max-width: 1024px;
+	margin: 0 auto;
+}*/
+
+.holiday-landing-page .heading,
+.holiday-landing-page .buy-btn,
+.holiday-landing-page .view-all {
+	background: green;
+}
+
+.holiday-landing-page .cols3 {
+	border: none;
+}
+
+.holiday-landing-page .cols3 span {
+	padding: 0;
+}
+
+.holiday-landing-page .cols3 p {
+	padding-top: 5px;
+	margin-top: 5px;
+	font-size: 11px;
+	text-align: initial;
+	font-family: 'Gotham-Medium';
+	border-top: 1px solid #979797;
+}
+
+.holiday-event-profile {
+	margin: 40px 0;
+}
+
+.holiday-event-profile img {
+	width: 350px;
+}
+
+.holiday-event-content {
+	display: inline-block;
+	position: relative;
+	left: 2%;
+	width: 40%;
+	vertical-align: top;
+}
+
+.holiday-event-content .setting {
+	padding-bottom: 10px;
+	font-size: 14px;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+	border-bottom: 1px solid #000;
+}
+
+.holiday-event-content p {
+	margin-bottom: 22px;
+	font-size: 14px;
+	font-family: 'Gotham-Medium';
+	line-height: 160%;
+}
+
+.holiday-event-content span {
+	display: block;
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-family: 'Gotham-Bold';
+	color: #1793ce;
+}
+
+.holiday-blogs {
+	padding-bottom: 40px;
+}
+
+.holiday-blog img {
+	width: 40%;
+}
+
+.holiday-blog .content {
+	display: inline-block;
+	position: relative;
+	left: 2%;
+	width: 45%;
+	vertical-align: top;
+}
+
+.holiday-blog title {
+	font-size: 18px;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+}
+
+.holiday-blog span {
+	display: block;
+	font-style: italic;
+	font-size: 14px;
+	font-family: 'Gotham-Book';
+}
+
+.holiday-blog p {
+	margin: 20px 0;
+	font-size: 15px;
+	font-family: 'Gotham-Book';
+	line-height: 120%;
+}
+
+.holiday-blog a {
+	font-style: italic;
+	font-size: 13px;
+	font-family: 'Gotham-Bold';
+	color: #1793ce;
+}
+/*END HOLIDAY LANGING ------------------------------- */
+
+@media (min-width:1024px) {
+	/*START CRAWL PROFILE */
+	.event-profile .list2 {
+		margin-left: 5%!important;
+	}
+
+	.ticket_info .left_col {
+		max-width: initial!important;
+		/* width: 70%; */
+	}
+	/*END CRAWL PROFILE ------------------------------- */
+} /*end min width 1024px*/
+
+
+@media (min-width:769px) {
+	/*START CRAWL PROFILE */
+	.links {
+		font-weight: bold;
+		font-size: 13px;
+		font-family: 'Gotham-Book';
+		text-transform: capitalize;
+	}
+
+	.links .prev {
+		padding-right: 10px;
+		margin-right: 10px;
+		border-right: 1px solid #000;
+	}
+
+	.profile .description title {
+		padding-bottom: 13px;
+		font-size: 20px;
+		font-family: 'Gotham-Bold';
+		text-transform: uppercase;
+		color: #013d41;
+	}
+
+	.profile .description title:last-child {
+		padding-bottom: 35px;
+		font-size: 18px;
+		text-transform: initial;
+	}
+
+	.profile .description {
+		display: inline-block;
+		position: relative;
+		left: 2%;
+		width: 58%;
+		vertical-align: top;
+	}
+
+	.profile .description p {
+		font-size: 12px;
+		font-family: 'arial';
+		line-height: 150%;
+	}
+
+	/*START SLIDER*/
+	.display {
+		display: inline-block;
+		width: 40%;
+		vertical-align: top;
+	}
+
+	.scroll-click {
+		font-size: 11px;
+		font-family: arial;
+	}
+
+	.display .big-pic {
+		width: 100%;
+	}
+
+	.mobile-thumbnails {
+		display: none;
+	}
+
+	.thumbnails {
+		width: 90%;
+		margin: 0 auto 20px;
+	}
+
+	.thumbnav {
+		width: 10px;
+		vertical-align: middle;
+	}
+
+	.small-pic {
+		display: inline-block;
+		width: 20%;
+		margin: 0 1%;
+		vertical-align: middle;
+	}
+	/*END SLIDER --------------------------------- */
+	
+	.ticket_info {
+	  font-family: 'Gotham-Bold', arial, sans-serif;
+	}
+
+	.pages .heading {
+		padding: 5px 10px;
+		font-size: 16px;
+		/*text-align: left;*/
+		vertical-align: middle;
+	}
+
+	.crawl-profile-page .heading {
+		background: green;
+	}
+
+	.pages .page_top {
+	  float: right;
+	  position: relative;
+	  top: 4px;
+	  font-size: 11px;
+	  vertical-align: middle;
+	}
+
+	.page_top a {
+	  font-family: 'Gotham-Medium';
+	  text-decoration: none;
+	  text-transform: uppercase;
+	  color: #fff;
+	}
+
+	.ticket_info .left_col {
+	  display: inline-block;
+	  max-width: 58%;
+	  width: 70%;
+	  border-right: 1px solid grey;
+	}
+
+	.ticket_type {
+	  font-size: 14px;
+	  font-family: 'Gotham-Bold';
+	}
+
+	.ticket_info .v {
+	  margin: 0 3px;
+	  font-size: 12px;
+	  color: #898989;}
+
+	.ticket_details a {
+	  font-size: 12px;
+	  text-decoration: none;
+	  font-style: italic;
+	  color: #077192;
+	  font-family: 'Futura-Medium-Oblique', arial, sans-serif;
+	}
+
+	.ticket_details a:hover {
+	  text-decoration: underline;
+	}
+
+	#ticket-drop {
+		display: none;
+	}
+
+	.ticket_info ul {
+		display: inline-block;
+		padding: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		width: auto;
+		font-size: 13px;
+		list-style-type: none;
+		line-height: 180%;
+		font-family: 'Gotham-Book';
+	}
+
+	.ticket_info .list2 {
+		margin: 0;
+    	margin-left: 5%!important;
+	}
+
+	.ticket_info ul li:before{
+	  content:"- ";
+	}
+
+	.ticket_info .right_col {
+	  display: inline-table;
+	  float: right;
+	  font-size: 14px;
+	}
+
+	.ticket_info .price {
+	  font-weight: bold;
+	  margin-right: 5px;
+	}
+
+	.ticket_info .fee {
+	  margin: 0 15px;
+	  font-family: 'Gotham-Book';
+	}
+
+	.ticket_info .buy_tickets {
+	  display: inline-block;
+	  width: 92px;
+	  padding: 10px;
+	  font-weight: bold;
+	  font-size: 11px;
+	  font-family: arial;
+	  text-transform: uppercase;
+	  text-align: center;
+	  background: #ff9001;
+	  color: #fff;
+	}
+
+	.ticket_row {
+	    padding: 20px 0;
+	    border-bottom: 1px solid #7f7d7d;
+	}
+
+	.ticket_row:last-child {
+		padding-bottom: 40px;
+		border-bottom: none;
+	}
+
+	.ticket_row .right_col {
+	  position: relative;
+	  bottom: 8px;
+	}
+
+	.ticket_info .char {
+	  margin: 0 3px;
+	  font-size: 10px;
+	  font-weight: bold;
+	}
+
+	.reg-points {
+		margin: 30px 0;
+	}
+
+	.reg-points-row {
+		padding: 20px 0;
+	}
+
+	.reg-points #googleMap {
+		display: inline-block;
+		width: 400px;
+		height: 400px;
+	}
+
+	.reg-points-locations {
+		display: inline-block;
+		margin-left: 2%;
+		font-size: 14px;
+		vertical-align: top;
+	}
+
+	.reg-points-col {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.reg-points-col:last-child {
+		position: relative;
+		left: 20%;
+	}
+
+	.reg-points-locations .town {
+		font-family: 'Gotham-Bold';
+	}
+
+	.reg-points-locations ol,
+	.reg-points-locations ul {
+		display: inline-block;
+		margin: 0;
+		font-family: 'Gotham-Book';
+		line-height: 130%;
+		vertical-align: top;
+	}
+
+	.reg-points-locations ol {
+		padding: 0 0 0 25px;
+		padding-bottom: 50px;
+	}
+
+	.reg-points-locations ul {
+		padding: 0;
+		padding-bottom: 30px;
+		list-style-type: none;
+	}
+
+	.reg-points-locations ol a,
+	.reg-points-locations ul a {
+		font-family: 'Gotham-Bold';
+		color: #1692cf;
+	}
+
+	.previous-photos .party-row {
+		margin-top: 30px;
+	}
+
+	.previous-photos .view-all {
+		background: green;
+	}
+	/*END CRAWL PROFILE ------------------------------- */
+} /*end min width 769px*/
+
+/*START PARTY PROFILE */
+.party-profile-page .heading,
+.party-profile-page .btn {
+	background: #1692cf;
+}
+
+.party-profile .setting {
+	margin-bottom: 18px;
+	line-height: 120%;
+}
+
+.party-profile title {
+	padding: 0!important;
+}
+
+.party-profile .premium {
+	font-size: 18px!important;
+	text-transform: initial!important;
+}
+
+.party-profile span {
+	display: block;
+	font-family: 'Gotham-Book';
+	color: #013d41;
+}
+
+.music-crowd {
+	margin-bottom: 40px;
+	font-size: 11.5px;
+	font-family: arial;
+	line-height: 140%;
+}
+
+.music-crowd title {
+	margin: 20px 0 0;
+	font-weight: bold;
+}
+
+.music-crowd p {
+	margin: 0;
+}
+
+/*END PARTY PROFILE ------------------------------- */
+
+/*START VENUE PROFILE */
+.venue-info {
+	margin: 30px 0;
+	text-align: center;
+	font-family: 'Gotham-Book';
+	color: #013d41;
+}
+
+.venue-info title {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	font-size: 27px;
+	letter-spacing: 1px;
+}
+
+.venue-info span {
+	margin-right: 10px;
+	padding-right: 10px;
+	font-size: 18px;
+	border-right: 1px solid #013d41;
+}
+
+.venue-info span:last-child {
+	margin-right: 0;
+	padding-right: 0;
+	border-right: none;
+}
+
+.venue-profile-page .content-col{
+	display: inline-block;
+	width: 50%;
+}
+
+.venue-profile-page .location-col{
+	display: inline-block;
+	position: relative;
+	left: 3%;
+	width: 46%;
+	vertical-align: top;
+}
+
+.venue-profile-page .heading {
+	text-align: left;
+}
+
+.venue-profile-page .description {
+	margin-bottom: 50px;
+}
+
+.venue-profile-page .description p {
+	padding-right: 10px;
+	font-size: 11.5px;
+	font-family: arial;
+	line-height: 150%;
+}
+
+.venue-profile-page .cols3 {
+	margin-right: 2%;
+}
+
+.venue-profile-page .info-btn {
+	margin: 10px 0 0;
+	width: 80px;
+	font-size: 10px;
+}
+
+.venue-profile-page .display {
+	width: 100%;
+}
+
+.venue-profile-page #googleMap {
+	width: 100%;
+	height: 300px;
+}
+/*END VENUE PROFILE ------------------------------- */
+
+
+/*START VENUE DIRECTORY */
+.featured-venues {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #888888
+}
+
+.ft-venue-col title,
+.venue-row title {
+	font-size: 18px;
+	font-family: 'Gotham-Book';
+	text-transform: uppercase;
+}
+
+.ft-venue-col span,
+.venue-row span {
+	display: block;
+	font-style: italic;
+	font-size: 11px;
+	font-family: 'Gotham-Book';
+}
+
+.ft-venue-col p,
+.venue-row p {
+	margin: 5px 0;
+	font-size: 11px;
+	font-family: 'Gotham-Book';
+	/* line-height: 140%; */
+}
+
+.ft-venue-col a,
+.venue-row a {
+	font-style: italic;
+	font-size: 11px;
+	font-family: 'Gotham-Bold';
+	color: #1793ce;
+}
+
+.search-venues {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+}
+
+.search-venues h3,
+.a-z h3 {
+	margin: 0 0 20px;
+	text-transform: uppercase;
+	font-size: 26px;
+	font-family: 'Gotham-Medium';
+}
+
+.search-venues .search {
+	height: 30px;
+	width: 79%;
+	font-size: 12px;
+	font-family: 'Gotham-book';
+	padding-left: 10px;
+	color: #797878;
+	background: #e8e7e6;
+	border: none;
+}
+
+.search-venues .submit-btn {
+	width: 16%;
+	height: 31px;
+	margin-left: -5px;
+	font-family: 'Gotham-Medium';
+	color: #fff;
+	background: #828282;
+	border: none;
+}
+
+.search-venues .filter {
+	margin-top: 50px;
+}
+
+.search-venues .filter-container {
+	border-left: 2px solid #888888;
+	border-right: 2px solid #888888;
+	border-top: 2px solid #888888;
+}
+
+.search-venues h4 {
+	padding: 15px 10px 0px;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'Gotham-Medium';
+	letter-spacing: 1px;
+}
+
+.search-venues ul {
+	padding: 10px 0 0;
+	margin: 0;
+	list-style: none;
+}
+
+.search-venues li {
+	padding: 8px 0 8px 10px;
+	text-transform: capitalize;
+	font-size: 12px;
+	font-family: 'Gothamx-Medium';
+	color: #1692cf;
+	border-bottom: 1px solid #888888;
+}
+
+.search-venues li:last-child {
+	border-bottom: 2px solid #888888;
+}
+
+.search-venues ul span,
+.search-venues .checkbox {
+	float: right;
+}
+
+.a-z {
+	display: inline-block;
+	position: relative;
+	left: 4%;
+	width: 65%;
+	vertical-align: top;
+}
+
+.a-z h3 {
+	display: inline-block;
+	width: 190px;
+	vertical-align: middle;
+	margin-bottom: 0;
+}
+
+.showing-row span {
+	font-size: 12px;
+	font-family: 'Gotham-Book';
+	vertical-align: middle;
+}
+
+.showing-row span:last-child {
+	float: right;
+	padding-top: 5px;
+}
+
+.showing-row .showing {
+	position: absolute;
+	left: 47%;
+	top: 8px;
+}
+
+.showing-row select {
+	margin-left: 10px;
+}
+
+.venue-row {
+	margin-top: 20px;
+	padding-top: 30px;
+	border-top: 2px solid #888888;
+}
+
+.venue-row img {
+	width: 200px;
+}
+
+.venue-row .content {
+	display: inline-block;
+	position: relative;
+	left: 2%;
+	max-width: 360px;
+	vertical-align: top;
+}
+
+.venue-row p {
+	margin: 20px 0;
+	font-family: 'Gotham-Medium';
+}
+
+.a-z .pagination {
+	padding-top: 20px;
+}
+	
+.a-z .pagination ul {
+	display: inline-block;
+	float: right;
+	font-family: 'Gotham-Bold';
+	color: #1692cf;
+	list-style-type: none;
+}
+
+.a-z .pagination li {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+/*END VENUE DIRECTORY ------------------------------- */
