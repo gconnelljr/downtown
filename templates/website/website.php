@@ -227,6 +227,7 @@ if(class_exists (Website)){
 		<script src="<?=$template_url?>js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
 		<script src="<?=$template_url?>js/jquery.sidr.js" type="text/javascript"></script>
 		<script src="<?=$template_url?>js/myjs.js" type="text/javascript"></script>
+		<script src="<?=$template_url?>js/jquery-ui.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div class="top_space" id="top"></div>
@@ -310,6 +311,19 @@ if($_GET['seo_debug'] == 1){
 	d($page);
 }
 ?>
+<script type="application/javascript">
+	var myCountdown2 = new Countdown({
+	target:"counter", 
+	year	: (new Date().getFullYear()) +1 ,
+	ampm	: "am",	
+	month	: 1, 
+	day		: 1,
+	width	: 230, 
+	height	: 40,
+	rangeHi:"month"	// <- no comma on last item!
+	});
+</script>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -324,6 +338,7 @@ if($_GET['seo_debug'] == 1){
   })();
 
 </script>
+
 	<?php 
 		
 

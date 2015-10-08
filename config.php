@@ -20,16 +20,15 @@ setlocale(LC_MONETARY, 'en_US');
 
 $website_id = 2; 
 $website = new stdClass ; 
-$website->ct_promoter_website_id = 15027; // nyec.com
+$website->ct_promoter_website_id = 15027; // downtowncountdown.net
 $website->website_id = $website_id; 
 $website->ct_promoter_id = 1;
 $website->holiday_id = 1;
-$website->flyer_type = \Crave\FlyerType::UnBranded;
 $website->site_criteria = [
 	'upcoming' => true, 
 	//'skip_defaults' => true,
 	//'ct_campaign_id' => 509 , // new years campaign 2014
-	//'ct_campaign_id' => 560 , // new years bar crawl campaign 2014
+	'ct_campaign_id' => 850 , // new years bar crawl campaign 2014
 	'status'=>'A',
 	'limit'=>5,
 	'ct_category_id' => 1,
