@@ -213,17 +213,24 @@ $eventide = $ct_event->venue_ide;
 	?>
 
 <section class="profile_page">
-	<ul class="page_nav">
-		<li class="page_link"><a href="#">tickets</a></li>
-		<li class="page_link"><a href="#">description</a></li>
-		<li class="page_link"><a href="#">music & crowd</a></li>
-		<li class="page_link"><a href="#">dress code</a></li>
-		<li class="page_link"><a href="#">age</a></li>
-		<li class="page_link"><a href="#">menu</a></li>
-	</ul>
-
-	<aside class="side_content">
-		<div class="flyer">
+	<div class="page_header">
+		<div class="party_info">
+			<div class="party_title"><?= $ct_event->venue->venue_name?></div>
+			<?php if($event->promotion){?><div class="promotions"> <?= $event->promotion?></div><?php }?>
+			<div class="party_location"><?= $event->where->address1?>, Doors Open at <?= $event->when->door_time->formatted?></div>
+		</div>
+		<a href="#"><div class="buy_tickets">buy tickets</div></a>
+		<ul class="page_nav">
+			<li class="page_link"><a href="#">tickets</a></li>/
+			<li class="page_link"><a href="#">description</a></li>/
+			<li class="page_link"><a href="#">music & crowd</a></li>/
+			<li class="page_link"><a href="#">dress code</a></li>/
+			<li class="page_link"><a href="#">age</a></li>/
+			<li class="page_link"><a href="#">menu</a></li>
+		</ul>
+	</div>
+	
+		<!-- <div class="flyer">
 
 		<?php
 				$params = [
@@ -239,50 +246,48 @@ $eventide = $ct_event->venue_ide;
 
 		<img src="<?= $flyer_image?>"/> 
 
-		</div>
-		<div class="venue_gallery">
-			<div class="heading">Venue Gallery</div>
-			<span>Scroll to see images. Click to enlarge</span>
-			
-			<div class="carousel">
-				<div class="display">
-				<?php
-				if($event->medias){
-				 ?>
-					<img class="big-pic" src="<?=$event->medias[0]->src?>" alt="<?= $image->alt_text?>" title="<?= $image->alt_text ?>" />
-				<?php }else{ ?>
-				This venue has no images
-				<?php } ?>
-				</div>
-				<div class="thumbnails">					
-				<?php
-				$venue = new \Crave\Model\Venue($event->where->ide);
-				$media_items = json_decode($venue->media_items);
-				if($media_items){
-				$venue = new \Crave\Model\Venue($event->where->ide);
-				$media_items = json_decode($venue->media_items);			
-				 foreach ($media_items as $item) {
-				 	$image = \Sky\VF\ImageManager::get_venue_image_src($item, 150, 150, $this->website_ide);
-				 ?>
-					<img class="small-pic" src="<?= $image->src?>" alt="<?= $image->alt_text?>" title="<?= $image->alt_text ?>" />
-				<? }
-				}?>
+		</div> -->
+		<div class="description_row">
+			<div class="description">
+				<div class="heading">Description</div>
+				<?= $event->description?>
+			</div>
+
+			<div class="venue_gallery">
+				<div class="carousel">
+					<div class="display">
+					<?php
+					if($event->medias){
+					 ?>
+						<img class="big-pic" src="<?=$event->medias[0]->src?>" alt="<?= $image->alt_text?>" title="<?= $image->alt_text ?>" />
+					<?php }else{ ?>
+					This venue has no images
+					<?php } ?>
+					</div>
+					
+					<span>Scroll to see images. Click to enlarge</span>
+					<div class="thumbnails">					
+					<?php
+					$venue = new \Crave\Model\Venue($event->where->ide);
+					$media_items = json_decode($venue->media_items);
+					if($media_items){
+					$venue = new \Crave\Model\Venue($event->where->ide);
+					$media_items = json_decode($venue->media_items);			
+					 foreach ($media_items as $item) {
+					 	$image = \Sky\VF\ImageManager::get_venue_image_src($item, NULL, NULL, $this->website_ide);
+					 ?>
+						<img class="small-pic" src="<?= $image->src?>" alt="<?= $image->alt_text?>" title="<?= $image->alt_text ?>" />
+					<? }
+					}?>
+					</div>
 				</div>
 			</div>
-		</div>
+		</div> <!-- end description row -->
 
-	</aside>
-
-	<div class="main_content">
-		<div class="party_info">
-			<div class="party_title"><?= $ct_event->venue->venue_name?></div>
-			<?php if($event->promotion){?><div class="promotions"> <?= $event->promotion?></div><?php }?>
-			<div class="party_location"><?= $event->where->address1?>, Doors Open at <?= $event->when->door_time->formatted?></div>
-		</div>
 		<div class="ticket_info">
-			<span class="heading">Tickets</span>
+			<div class="heading">Tickets</div>
 		<?php foreach ($event->tickets as $tickets) { ?>
-			<div class="ticket_row1">
+			<div class="ticket_row">
 				<div class="left_col">
 					<span class="ticket_type"><?= $tickets->name?></span>
 					<span class="v">v</span>
@@ -298,10 +303,7 @@ $eventide = $ct_event->venue_ide;
 			</div>
 		<?php } ?>
 		</div>
-		<div class="description">
-			<div class="heading">Description</div>
-				<?= $event->description?>
-		</div>
+		
 		<!-- <div class="music_crowd">
 			<span class="heading">Music & Crowd</span>
 			<span class="page_top"><a href="#top">Back to Top</a></span>
@@ -329,7 +331,6 @@ $eventide = $ct_event->venue_ide;
 			}
 			
 		?>
-		</div>
 </section>
 
 

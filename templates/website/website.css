@@ -1,23 +1,22 @@
-@font-face { font-family: 'Century-Gothic'; src: url('../fonts/century/CenturyGothic.ttf');} 
-@font-face { font-family: 'FuturaStd-Book'; src: url('../fonts/futura/FuturaStd-Book.otf');} 
+@font-face { font-family: 'Century-Gothic'; src: url('/templates/website/content/fonts/century/CenturyGothic.ttf');} 
+@font-face { font-family: 'FuturaStd-Book'; src: url('/templates/website/content/fonts/futura/FuturaStd-Book.otf');} 
 @font-face { font-family: 'FuturaStd-Bold'; src: url('../fonts/futura/FuturaStd-Bold.otf');} 
-@font-face { font-family: 'Futura-Medium'; src: url('../fonts/futura/FuturaStd-Medium.otf');} 
-@font-face { font-family: 'Futura-Medium-Oblique'; src: url('../fonts/futura/FuturaStd-MediumOblique.otf');} 
-@font-face { font-family: 'Futura-Heavy'; font-weight: bold; src: url('../fonts/futura/FuturaStd-Heavy.otf');}
-@font-face { font-family: 'Gotham-Bold'; src: url('../fonts/gotham/Gotham-Bold.otf');} 
-@font-face { font-family: 'Gotham-BoldItalic'; src: url('../fonts/gotham/Gotham-BoldItalic.otf');} 
-@font-face { font-family: 'Gotham-Book'; src: url('../fonts/gotham/Gotham-Book.otf');} 
-@font-face { font-family: 'Gotham-Light'; src: url('../fonts/gotham/Gotham-Book.otf');} 
-@font-face { font-family: 'Gotham-Medium'; src: url('../fonts/gotham/Gotham-Medium.otf');} 
-@font-face { font-family: 'GothamNarrow-Medium'; src: url('../fonts/GothamNarrow/GothamNarrow-Medium.otf');} 
-@font-face { font-family: 'GothamNarrow-Bold'; src: url('../fonts/GothamNarrow/GothamNarrow-Bold.otf');}
-@font-face { font-family: 'GothamNarrow-Book'; src: url('../fonts/GothamNarrow/GothamNarrow-Book.otf');}
-@font-face { font-family: 'GothamX-Bold'; src: url('../fonts/GothamXNarrow/GothamX-Narrow-Bold.otf');}
+@font-face { font-family: 'Futura-Medium'; src: url('/templates/website/content/fonts/futura/FuturaStd-Medium.otf');} 
+@font-face { font-family: 'Futura-Medium-Oblique'; src: url('/templates/website/content/fonts/futura/FuturaStd-MediumOblique.otf');} 
+@font-face { font-family: 'Futura-Heavy'; font-weight: bold; src: url('/templates/website/content/fonts/futura/FuturaStd-Heavy.otf');}
+@font-face { font-family: 'Gotham-Bold'; src: url('/templates/website/content/fonts/gotham/Gotham-Bold.otf');} 
+@font-face { font-family: 'Gotham-BoldItalic'; src: url('/templates/website/content/fonts/gotham/Gotham-BoldItalic.otf');} 
+@font-face { font-family: 'Gotham-Book'; src: url('/templates/website/content/fonts/gotham/Gotham-Book.otf');} 
+@font-face { font-family: 'Gotham-Light'; src: url('/templates/website/content/fonts/gotham/Gotham-Book.otf');} 
+@font-face { font-family: 'Gotham-Medium'; src: url('/templates/website/content/fonts/gotham/Gotham-Medium.otf');} 
+@font-face { font-family: 'GothamNarrow-Medium'; src: url('/templates/website/content/fonts/GothamNarrow/GothamNarrow-Medium.otf');} 
+@font-face { font-family: 'GothamNarrow-Bold'; src: url('/templates/website/content/fonts/GothamNarrow/GothamNarrow-Bold.otf');}
+@font-face { font-family: 'GothamNarrow-Book'; src: url('/templates/website/content/fonts/GothamNarrow/GothamNarrow-Book.otf');}
+@font-face { font-family: 'GothamX-Bold'; src: url('/templates/website/content/fonts/GothamXNarrow/GothamX-Narrow-Bold.otf');}
 
 body {
   margin: 0;
   padding: 0px;
-  font-family: 'Futura-Book', arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -33,7 +32,7 @@ ul {
 }
 
 img {
-  width: 110%;
+  width: 100%;
 }
 
 a {
@@ -138,10 +137,6 @@ footer .site_url {
 footer .col {
   display: inline-block;
   padding: 20px 0;
-}
-
-footer .left_col {
-  margin-right: 60px;
 }
 
 footer .site_name,
@@ -347,6 +342,8 @@ main .top_div {
   display: inline-block;
   padding-bottom: 10px;
   margin-left: 11px;
+  margin-bottom: 30px;
+  height: 153px;
   width: 75%;
   border: 1px solid #beac7f;
   vertical-align: top;
@@ -417,7 +414,7 @@ main .top_div {
 }
 
 .profile_page {
-  padding: 10px;
+  padding: 0 10px;
   max-width: 1024px;
   margin: 0 auto;
 }
@@ -433,33 +430,53 @@ main .top_div {
 }
 
 .profile_page .page_nav {
+  margin-top: 30px;
+  /* font-family: 'Century-Gothic'; */
+  font-weight: bold;
   text-transform: capitalize;
   text-align: center;
+  border-top: 1px solid #000;
 }
 
 .profile_page .page_nav li {
   display: inline-block;
-  padding: 10px 5.2%;
-  margin: 0 -3px;
+  padding: 10px 5.6%;
   font-size: 16px;
-  font-family: 'Century-Gothic-Bold';
   color: #102f32;
-  background: #d6e9e6;
 }
 
-.profile_page .page_nav li:last-child a {
-  border: none;
+.profile_page .page_nav li:first-child {
+  padding-left: 0;
 }
 
-.profile_page .page_nav li:hover {
-  color: #fff;
-  background: #40b39c;
+.profile_page .page_nav li:last-child {
+  padding-right: 0;
+}
+
+.profile_page .page_header {
+  position: relative;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 20px;
+  background: #e6d8b8;
 }
 
 .profile_page .party_info {
   display: inline-block;
-  padding: 20px 0;
-  color: #102f32;
+  width: 300px;
+  line-height: 150%;
+}
+
+.page_header .buy_tickets {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-family: arial;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: #089ce9;
 }
 
 .profile_page .party_info .party_title {
@@ -490,9 +507,13 @@ main .top_div {
   font-size: 12px;
 }
 
+.profile_page .description_row {
+  overflow: hidden;
+}
+
 .profile_page .description {
   display: inline-block;
-  width: 58%;
+  width: 54%;
   vertical-align: top;
 }
 
@@ -518,8 +539,8 @@ main .top_div {
 
 /*START SLIDER*/
 .display {
-  display: inline-block;
-  width: 40%;
+  /* display: inline-block; */
+  /* width: 40%; */
   vertical-align: top;
 }
 
@@ -537,8 +558,8 @@ main .top_div {
 }
 
 .thumbnails {
-  width: 90%;
-  margin: 0 auto 20px;
+  /* width: 90%; */
+  /* margin: 0 auto 20px; */
 }
 
 .thumbnav {
@@ -548,7 +569,7 @@ main .top_div {
 
 .small-pic {
   display: inline-block;
-  width: 20%;
+  width: 22%;
   margin: 0 1%;
   vertical-align: middle;
 }
@@ -561,14 +582,14 @@ main .top_div {
 
 .ticket_info .left_col {
   display: inline-block;
-  max-width: 58%;
+  max-width: initial!important;
   width: 70%;
   border-right: 1px solid grey;
 }
 
-.ticket_info .left_col {
+/*.ticket_info .left_col {
   max-width: initial!important;
-}
+}*/
 
 .ticket_type {
   font-family: 'Gotham-Bold';
@@ -645,10 +666,7 @@ main .top_div {
   font-family: arial;
   text-transform: uppercase;
   text-align: center;
-  background: -webkit-linear-gradient(#4cdde7, #2a2d2d); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#4cdde7, #2a2d2d); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#4cdde7, #2a2d2d); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#4cdde7, #2a2d2d); 
+  background: #089ce9;
   color: #fff;
   vertical-align: middle;
 }
