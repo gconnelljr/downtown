@@ -214,140 +214,46 @@ if(class_exists (Website)){
 	}
 	?>
 
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
-		<?php if(is_object($page->seo) && !is_null($page->seo)): ?>
-			<title><?= $page->seo->title ?></title>
-			<?php
-			    $meta_tag = $page->seoMetaContent();// Meta_tag display pulled from page.php
-				foreach ($meta_tag as $key => $val) {
-			?>
-			    <meta name="<?= $key ?>" content="<?= $val ?>" />
-			<?php  } ?>
-			
-			<meta property="og:title" content="<?= $page->seo->meta_title ?>" />
-			<meta property="og:type" content="<?= $page->seo->domain ?>" />
-			<meta property="og:url" content="<?= $page->seo->url ?>" />
-		<?php else: ?>
-			<!-- <title>New Year's Eve Central</title> -->
-			<meta name="subject" content="" />
-			<meta name="title" content="" />
-			<meta name="Description" content="" />
-			<meta name="Keywords" content="" />
-			<meta property="og:title" content="newyearsevecentral.com" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="Newyearsevecentral.com" />
-		<?php endif; ?>
-		<link rel="stylesheet" href="<?=$template_url?>content/style.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Downtown Countdown</title>
+		<link rel="stylesheet" href="<?=$template_url?>website.css" type="text/css">
 		<link rel="stylesheet" href="<?=$template_url?>content/sidr.dark.css" type="text/css">
 		<script src="<?=$template_url?>js/jquery-1.9.1.min.js" type="text/javascript"></script>
 		<script src="<?=$template_url?>website.js" type="text/javascript"></script>
 		<script src="<?=$template_url?>js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
 		<script src="<?=$template_url?>js/jquery.sidr.js" type="text/javascript"></script>
-		<script src="<?=$template_url?>js/jquery.sidr.min.js" type="text/javascript"></script>
+		<script src="<?=$template_url?>js/myjs.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div class="top_space" id="top"></div>
-		<header class="header_container">
-			<a href="/<?= $_SESSION['current_market'] ?>"><img class="nye_logo" src="<?=$template_url?>content/images/nye_logo.png" alt="nye logo" title="nye logo" /></a>
-			<nav class="header_nav">
-				<div class="chosen_city">
-				<?php if($page->uri !== "/"): ?>
-					<a class="city_color drop_menu">Choose City</a>
-					<div class="featured_cities">
-						<div class="featured-city"><a href="/newyork<?= $set_url ?>" target="_self" class="featured market_link">New York</a></div>
-						<div class="featured-city"><a href="/atlanta<?= $set_url ?>" target="_self" class="featured market_link">Atlanta</a></div>
-						<div class="featured-city"><a href="/baltimore<?= $set_url ?>" target="_self" class="featured market_link">Baltimore</a></div>
-						<div class="featured-city"><a href="/boston<?= $set_url ?>" target="_self" class="featured market_link">Boston</a></div>
-						<div class="featured-city"><a href='/brooklyn<?= $set_url ?>' target="_self" class='sub_market market_link'>Brooklyn</a></div>
-						<div class="featured-city"><a href="/chicago<?= $set_url ?>" target="_self" class="featured market_link">Chicago</a></div>
-						<div class="featured-city"><a href="/losangeles<?= $set_url ?>" target="_self" class="featured market_link">Los Angeles</a></div>
-						<div class="featured-city"><a href="/miami<?= $set_url ?>" target="_self" class="featured market_link">Miami</a></div>
-						<div class="featured-city"><a href='/manhattan<?= $set_url ?>' target="_self" class='sub_market market_link'>Manhattan</a></div>
-						<div class="featured-city"><a href="/newjersey<?= $set_url ?>" target="_self" class="featured market_link">New Jersey</a></div>
-						<div class="featured-city"><a href="/philadelphia<?= $set_url ?>" target="_self" class="featured market_link">Philadelphia</a></div>
-						<div class="featured-city"><a href="/washington<?= $set_url ?>" target="_self" class="featured market_link">Washington DC</a></div>
-						<div class="featured-city"><a href='/queens<?= $set_url ?>' target="_self" class='sub_market market_link'>Queens</a></div>
-									<span class='change-city other-cities'>Other Cities</span>
-								<div class="non-featured-cities">
-									<!-- Display cities that are not featured -->
-									<?php if(is_array($columns)): ?>
-										<?php foreach($columns as $key => $col): ?>
-												<?php foreach($col as $market): ?>
-													<?php if(!array_key_exists($market->slug, $featured_array)): ?>
-														<div class="non-featured-city"><a href="<?= '/' . $market->slug . $set_url ?>" target="_self" class="market_link"><?=$market->name?></a></div>
-													<?php endif; ?>
-												<?php endforeach; ?>
-										<?php endforeach; ?>
-									<?php endif; ?>
-
-									<?php if($other_markets): ?>
-										<?php foreach($other_markets as $key => $markets): ?>
-											<?php foreach($markets as $m): ?>
-												<?php if(!array_key_exists($market->slug, $featured_array)): ?>
-													<div class="non-featured-city"><a href="<?= '/' . $m->slug . $set_url ?>" target="_self" class="market_link"><?=$m->name?></a></div>
-												<?php endif; ?>
-											<?php endforeach; ?>
-										<?php endforeach; ?>
-									<?php endif; ?>
-								</div>
+		<header>
+			<div class="container">
+				<img class="logo" src="<?=$template_url?>content/images/countdown-logo.png" alt="" />
+				<div class="counter_col">
+					<div class="social_media">
+						<span>share with friends</span>
+						<a href="#"><img src="<?=$template_url?>content/images/fb.jpg" alt="" /></a>
+						<a href="#"><img src="<?=$template_url?>content/images/tw.jpg" alt="" /></a>
+						<a href="#"><img src="<?=$template_url?>content/images/ig.jpg" alt="" /></a>
 					</div>
-					<a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : 'newyork' ?>" class="city_chosen" target="_self"><?= $_SESSION['current_market'] ? $selected_market[$_SESSION['current_market']] : 'New York'?></a>
-				<?php else: ?>
-					<a href="#" class="nav_link city_color drop_menu select_city">choose city</a>
-				<?php endif; ?>
-				</div>
-				<a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : 'newyork' ?>/events" class="nav_link <?= strpos($page->uri, 'events') ? 'active_nav' : '' ?>">parties</a>
-				<a href="/timessquare" class="nav_link <?= strpos($page->uri, 'timessquare') ? 'active_nav' : '' ?>">times square</a>
-				<a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : 'newyork' ?>/partypasses" class="nav_link <?= strpos($page->uri, 'partypasses') ? 'active_nav' : '' ?>">party passes</a>
-				<a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : 'newyork' ?>/dinners" class="nav_link <?= strpos($page->uri, 'dinners') ? 'active_nav' : '' ?>">dinners</a>
-				<a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : 'newyork' ?>/cruises" class="nav_link <?= strpos($page->uri, 'cruises') ? 'active_nav' : '' ?>">cruises</a>
-				<a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : 'newyork' ?>/hotels" class="nav_link <?= strpos($page->uri, 'hotels') ? 'active_nav' : '' ?>">hotels</a>
-				<a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : 'newyork' ?>/bar-crawls" class="nav_link <?= strpos($page->uri, 'bar-crawls') ? 'active_nav' : '' ?>">bar crawls</a>
-				<a href="http://cravetickets.com/sell-tickets/get-started?ref=newyearscentral.com" rel="nofollow" target="_blank" class="nav_link post_party">post a party</a>
-				<a href="http://cravetickets.com/contact?ref=newyearscentral.com" rel="nofollow" target="_blank" class="nav_link concierge">concierge</a>
-			</nav>
-			
-			<a id="right-menu" class="tiny button secondary radius" href="#sidr_nav">
-				<!-- <span class="menu">Menu</span> -->
-				<span><img src="<?=$template_url?>content/images/nav_icon.png" alt="nav icon" title="Check out our menu" /></span></a>
-			
-			<ul class="sidr">
-				<li><a href="#" class="nav_link choose_city">choose city</a></li>
-				<li><a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : /*$_COOKIE['current_market']*/ 'newyork' ?>/events" class="nav_link">parties</a></li>
-				<li><a href="/timessquare" class="nav_link">times square</a></li>
-				<li><a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : /*$_COOKIE['current_market']*/ 'newyork' ?>/partypasses" class="nav_link">party passes</a></li>
-				<li><a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : /*$_COOKIE['current_market']*/ 'newyork' ?>/dinners" class="nav_link">dinners</a></li>
-				<li><a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : /*$_COOKIE['current_market']*/ 'newyork' ?>/cruises" class="nav_link">cruises</a></li>
-				<li><a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : /*$_COOKIE['current_market']*/ 'newyork' ?>/hotels" class="nav_link">hotels</a></li>
-				<li><a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : /*$_COOKIE['current_market']*/ 'newyork' ?>/bar-crawls" class="nav_link">bar crawls</a></li>
-				<li class="post_party"><a href="http://cravetickets.com/sell-tickets/get-started?ref=newyearscentral.com" class="nav_link">post a party</a></li>
-				<li class="concierge"><a href="http://cravetickets.com/contact?ref=newyearscentral.com" class="nav_link">concierge</a></li>
-			</ul>
-				
-		</header>
-
-				<div class="banner_container">
-			<div class="banner_content">
-				<div class="main_col">
-					<h1 class="city"><?=$page->seo->h1 ?> </h1>
-					<div class="search_row">
-						<span>find a party</span>
-						<form action="#" id="searchevents" method="GET">
-							<input type="text" class="topsearch search_field" placeholder="SEARCH BY VENUE NAME, CITY, STATE, ZIP" name="q" value="<?= $_GET['q'] ?>">
-							<input class="search_btn" type="submit" value="SEARCH">
-						</form>
-					</div>
-				</div>
-				<div class="side_col">
-					<div class="questions">Question about a party?</div>
-					<div class="customer_service">Customer Service <span>917-300-0930</span></div>
+					<div class="counter"></div>
+					<!-- <form><input type="text" placeholder="Search"></form> -->
 				</div>
 			</div>
-		</div>
+
+			<div class="nav_row">
+				<nav>
+					<a href="/newyork"><li>new york</li></a>
+					<a href="/baltimore"><li>baltimore</li></a>
+					<a href="/washington-dc"><li>washington</li></a>
+					<a href="/atlanta"><li>atlanta</li></a>
+				</nav>
+			</div>
+		</header>
 
 		<style>
 		.chosen_city {
@@ -388,29 +294,13 @@ $(document).ready(function() {
 
 		
 		<footer>
-			<div class="vip_link"><a href="/<?= $_SESSION['current_market'] ? $_SESSION['current_market'] : /*$_COOKIE['current_market']*/ 'newyork' ?>">Newyearsevecentral.com</a></div>
-			<div class="footer_row">
-				<div class="leftcol col">
-					<span>Customer Service</span>
-					<div>917-300-0930</div>
-					<div>info@Newyearsevecentral.com</div>
-				</div>
-				<div class="right-middlecol col">
-					<div><a href="/about-us">About</a></div>
-					<div><a href="/terms-and-conditions">Terms and Conditions</a></div>
-					<div><a href="/privacy-policy">Privacy Policy</a></div>
-				</div>
-				<div class="rightcol col">
-					<span>Connect With Us</span>
-					<div class="social_media">
-						<a href="https://www.facebook.com/JoonbugNYC"><img src="/templates/website/content/images/foot-fb.png" alt="facebook" title="facebook" /></a>
-						<a href="https://twitter.com/JoonbugBuzz"><img src="/templates/website/content/images/foot-tw.png" alt="twitter" title="twitter" /></a>
-						<a href="https://instagram.com/joonbugbuzz/"><img src="/templates/website/content/images/foot-ig.png" alt="instagram" title="instagram" /></a>
-					<!--	<a href="#"><img src="/templates/website/content/images/foot-gp.png" alt="google" title="google" /></a> -->
-					</div>
-				</div>
+			<div class="site_url">DowntownCountdown.net</div>
+			<div class="left_col col">
+				<div class="cust_service">CUSTOMER SERVICE</div>
+				<div class="cust_num">1.800.000.0000</div>
+				<div class="email">Email Address Placeholder</div>
 			</div>
-			<div class="copyright">© 2015 Newyearsevecentral.com™ All rights reserved. Sitemap.</div>
+			<div class="copyright">© 2015 All Rights Reserved</div>
 		</footer>
 	</body>
 </html>

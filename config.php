@@ -2,7 +2,7 @@
 
 
 $sky_canonical_redirect = array(
-    'www.newyearsevecentral.com' => 'newyearsevecentral.com'
+    'www.downtowncountdown.net' => 'downtowncountdown.net'
 );
 
 
@@ -20,7 +20,7 @@ setlocale(LC_MONETARY, 'en_US');
 
 $website_id = 2; 
 $website = new stdClass ; 
-$website->ct_promoter_website_id = 2562; // nyec.com
+$website->ct_promoter_website_id = 15027; // nyec.com
 $website->website_id = $website_id; 
 $website->ct_promoter_id = 1;
 $website->holiday_id = 1;
@@ -31,6 +31,7 @@ $website->site_criteria = [
 	//'ct_campaign_id' => 509 , // new years campaign 2014
 	//'ct_campaign_id' => 560 , // new years bar crawl campaign 2014
 	'status'=>'A',
+	'limit'=>5,
 	'ct_category_id' => 1,
 	'seller__ct_promoter_id' => $website->ct_promoter_id,
 	'ct_promoter_website_id' => $website->ct_promoter_website_id,

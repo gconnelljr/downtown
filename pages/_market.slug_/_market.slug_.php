@@ -9,7 +9,7 @@ if(!$this->seo){
 }
 
 if (!$this->seo->title) {
-	$this->seo->title = $this->ide.' on New Years Eve Central';
+	$this->seo->title = $this->ide.' Downtown Countdown';
 }
 
 
@@ -100,6 +100,91 @@ $events = $main_events;
 $left_events = $events;
 // load current market
 $template_url = "/templates/website/";
-\Website::top($this);
-include("pages/events/list.php");
+
+
+\Website::top($this); ?>
+
+<section class="listings_page container pages">
+	<section class="introduction">
+		<div class="container">
+			<h1><?= $this->seo->h1?></h1>
+			<p>Downtown Countdown is your global source for the biggest and best New Year’s Eve parties. Celebrate New Year's with a million of your closest friends in some of the best clubs, lounges, event spaces, restaurants, cruises, etc. We are the worldwide destination for New Year's Eve revelers with more than 60 fabulous New Year's events.</p>
+		</div>
+	</section>
+
+	<aside>
+		<div class="price">
+			<div class="heading">Events from A-Z</div>
+			<ul>
+			<?php foreach ($left_events as $events) {?>
+				<li><a href="<?= $events['url']?>"><?= $events['venue_name'] ?></a></li>
+			<?php } ?>
+			</ul>
+		</div>
+	</aside>
+
+	<main>
+		<div class="top_div clear">
+			<div class="list_map clear">
+				<a href="#"><img src="<?= $template_url?>content/images/list.jpg" /></a>
+				<a href="#"><img src="<?= $template_url?>content/images/map.jpg" /></a>
+			</div>
+			<div class="heading"><?= count($events);?> results found</div>
+		</div>
+
+		<div class="listing_row">
+		<?php foreach ($main_events as $events) {
+		$stripped_text = strip_tags($events['description']);
+		$first_sentence = $stripped_text !== "" ? substr($stripped_text, 0, strpos($stripped_text, ' ', 260)) : 'BarCrawl';
+
+		$params = [
+			'ide' => $events['ide'],
+			'type' => 'branded',
+			'width' => '147',
+			'height' => '147',
+			'media_items' => $events['media_items']
+		];
+
+		$flyer_image = Sky\VF\ImageManager::get_flyer_array($params);
+
+		?>
+		<script type="application/ld+json">
+		{
+		  "@context": "http://schema.org",
+		  "@type": "Event",
+		  "location": {
+		    "@type": "Place",
+		    "address": {
+		      "@type": "PostalAddress",
+		      "addressLocality": "<?= $events['city'] ?>",
+		      "addressRegion": "<?= $events['state'] ?>",
+		      "postalCode": "<?= $events['zip'] ?>",
+		      "streetAddress": "<?= $events['address1'] ?>"
+		    },
+		    "name": "<?= $events['venue_name'] ?>"
+		  },
+		  "name": "<?= $events['venue_name'] ?>",
+		  "startDate": "<?= $events['start_date'] ?>"
+		}
+	</script>
+			<div class="listing_img">
+				<a href="<?= $events['url']?>"><img src="<?= $flyer_image ?>" alt="" /></a>
+			</div>
+			<div class="listing_content">
+				<div class="listing_header">
+					<span class="name"><?= $events['venue_name']?></span>
+					<span class="address"><?= $events['address1']?>, <?= $events['city']?>, <?= $events['state']?> <?= $events['zip']?></span>
+				</div>
+				<p><?= $event['description']?></p>
+				<div class="listing_btns">
+					<a href="<?= $events['url']?>"><div class="info_btn btn">more info</div></a>
+					<a href="<?= $events['buy_url']?>"><div class="buy_btn btn">buy now</div></a>
+				</div>
+			</div>
+		<?php } ?>
+		</div>
+	</main>
+</section>
+
+<?php
 \Website::bottom($this);
