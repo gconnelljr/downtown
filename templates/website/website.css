@@ -9,9 +9,9 @@
 @font-face { font-family: 'Gotham-Book'; src: url('/templates/website/content/fonts/gotham/Gotham-Book.otf');} 
 @font-face { font-family: 'Gotham-Light'; src: url('/templates/website/content/fonts/gotham/Gotham-Book.otf');} 
 @font-face { font-family: 'Gotham-Medium'; src: url('/templates/website/content/fonts/gotham/Gotham-Medium.otf');} 
-@font-face { font-family: 'GothamNarrow-Medium'; src: url('/templates/website/content/fonts/GothamNarrow/GothamNarrow-Medium.otf');} 
-@font-face { font-family: 'GothamNarrow-Bold'; src: url('/templates/website/content/fonts/GothamNarrow/GothamNarrow-Bold.otf');}
-@font-face { font-family: 'GothamNarrow-Book'; src: url('/templates/website/content/fonts/GothamNarrow/GothamNarrow-Book.otf');}
+@font-face { font-family: 'GothamNarrow-Medium'; src: url('/templates/website/content/fonts/GothamNarrow-Medium.otf');} 
+@font-face { font-family: 'GothamNarrow-Bold'; src: url('/templates/website/content/fonts/GothamNarrow-Bold.otf');}
+@font-face { font-family: 'GothamNarrow-Book'; src: url('/templates/website/content/fonts/GothamNarrow-Book.otf');}
 @font-face { font-family: 'GothamX-Bold'; src: url('/templates/website/content/fonts/GothamXNarrow/GothamX-Narrow-Bold.otf');}
 
 body {
@@ -61,6 +61,7 @@ p {
 
 /*<================ HEADER ================>*/
 header {
+  position: relative;
   background: #252424;
 }
 
@@ -123,7 +124,7 @@ header nav li:hover {
 /*<================ FOOTER ================>*/
 footer {
   padding: 40px 0;
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Gotham-Book';
   text-align: center;
   color: #fff;
@@ -131,7 +132,7 @@ footer {
 }
 
 footer .site_url {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 footer .col {
@@ -141,11 +142,11 @@ footer .col {
 
 footer .site_name,
 footer .cust_service {
-  color: #3a74ca;
+  color: #e0d1ae;
 }
 
 .copyright {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /*<================ INDEX ================>*/
@@ -503,7 +504,7 @@ main .top_div {
   width: 42%;
 }
 
-.profile_page .venue_gallery span {
+.profile_page .venue_gallery .scroll {
   font-size: 12px;
 }
 
@@ -698,9 +699,82 @@ main .top_div {
   font-family: 'Gotham-Medium';
 }
 
-#owl-demo .small-pic {
-  width: 95%!important;
+/*START OWL SLIDER*/
+div#owl-demo {
+  display: inline-block;
+  width: 100px;
+  max-height: 70px;
+  overflow: hidden;
 }
+
+#owl-demo [class*=item]{
+}
+
+#owl-demo [class*=item] img {
+}
+
+#owl-demo .overlay {width: 100%;
+  height: 50px;
+  position: absolute; top: 154px;
+  background: #d92020;
+  opacity: .92;
+  padding: 6px 14px;
+}
+
+#owl-demo .overlay2 {width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 231px;
+  background: white;
+  opacity: .92;
+  padding: 6px 14px;
+}
+
+#owl-demo .choose1 {width: 100px;
+  font-family: "Gotham Medium";
+  font-size: 14px;
+  margin-bottom: -5px;
+  color: red;
+}
+
+#owl-demo .city1 {width: 100px;
+  font-family: "Gotham Book";
+  font-size: 15px;
+  color: black;
+}
+
+#owl-demo .city {
+  width: 100px;
+  font-family: "Gotham Book";
+  font-size: 15px;
+  color: #fff;
+}
+
+#owl-demo .choose {
+  width: 100px;
+  font-family: "Gotham Medium";
+  font-size: 10px;
+  margin-bottom: -5px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+#owl-demo .city {
+  width: 100px;
+  font-family: "Gotham Book";
+  font-size: 10px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#owl-demo .small-pic {
+  width: 100%!important;
+}
+
+/*END OWL SLIDER -------------- */
 
 @media screen and (max-width: 992px) {
   /*<================ HEADER ================>*/

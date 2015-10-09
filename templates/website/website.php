@@ -222,12 +222,18 @@ if(class_exists (Website)){
 		<title>Downtown Countdown</title>
 		<link rel="stylesheet" href="<?=$template_url?>website.css" type="text/css">
 		<link rel="stylesheet" href="<?=$template_url?>content/sidr.dark.css" type="text/css">
+
+		<link rel="stylesheet" href="<?=$template_url?>owl.transitions.css" type="text/css">
+		<link href="<?=$template_url?>owl.carousel.css" rel="stylesheet">
+		<link href="<?=$template_url?>owl.theme.css" rel="stylesheet">
+
 		<script src="<?=$template_url?>js/jquery-1.9.1.min.js" type="text/javascript"></script>
 		<script src="<?=$template_url?>website.js" type="text/javascript"></script>
 		<script src="<?=$template_url?>js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
 		<script src="<?=$template_url?>js/jquery.sidr.js" type="text/javascript"></script>
-		<script src="<?=$template_url?>js/myjs.js" type="text/javascript"></script>
+		<!-- <script src="<?=$template_url?>js/myjs.js" type="text/javascript"></script> -->
 		<script src="<?=$template_url?>js/jquery-ui.js" type="text/javascript"></script>
+		<script src="<?=$template_url?>/owl.carousel.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div class="top_space" id="top"></div>

@@ -265,8 +265,8 @@ $eventide = $ct_event->venue_ide;
 					<?php } ?>
 					</div>
 					
-					<span>Scroll to see images. Click to enlarge</span>
-					<div class="thumbnails">					
+					<div>Scroll to see images. Click to enlarge</div>
+					
 					<?php
 					$venue = new \Crave\Model\Venue($event->where->ide);
 					$media_items = json_decode($venue->media_items);
@@ -276,10 +276,14 @@ $eventide = $ct_event->venue_ide;
 					 foreach ($media_items as $item) {
 					 	$image = \Sky\VF\ImageManager::get_venue_image_src($item, NULL, NULL, $this->website_ide);
 					 ?>
-						<img class="small-pic" src="<?= $image->src?>" alt="<?= $image->alt_text?>" title="<?= $image->alt_text ?>" />
+					 <div id="owl-demo">
+						<div class="item">
+							<img class="small-pic" src="<?= $image->src?>" alt="<?= $image->alt_text?>" title="<?= $image->alt_text ?>" />
+						</div>
+					</div>
 					<? }
 					}?>
-					</div>
+						
 				</div>
 			</div>
 		</div> <!-- end description row -->
@@ -336,7 +340,13 @@ $eventide = $ct_event->venue_ide;
 
 <script>
 $(function(){
-	//$('#imgMain')
+	$("#owl-demo").owlCarousel({
+			autoPlay: 3000, //Set AutoPlay to 3 seconds
+			items : 4,
+			itemsDesktop : [1199,3],
+			itemsDesktopSmall : [979,3]
+		});
+
 
 	$('.thumbs img').each(function(){
 		$(this).bind('mouseover' , function(){
